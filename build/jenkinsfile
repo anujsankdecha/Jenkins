@@ -15,7 +15,7 @@ pipeline {
         }
         stage("build docker imaage"){
             steps{
-                sh "dcoker build -t webapp:v1 ."
+                sh "docker build -t webapp:v1 ."
             }
         }
         stage("run docker container"){
