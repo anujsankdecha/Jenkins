@@ -1,6 +1,6 @@
 pipelin {
     agent {
-        label 'ci-agent'
+        label 'jenkins-agent'
     }
     options {
         timeout (time: 1, unit: 'HOURS')
