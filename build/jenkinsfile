@@ -13,14 +13,15 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/anujsankdecha/Jenkins.git'
             }
         }
-        stage("build docker imaage"){
-            steps{
-                sh "docker build -t webapp:v1 ."
-            }
-        }
+        // stage("build docker imaage"){
+        //  steps{
+        //      sh "docker build -t webapp:v1 ."
+        //    }
+        // }
         stage("run docker container"){
             steps{
-                sh "docker run -dit --name webapp -p 80:80 webapp:v1"
+               // sh "docker run -dit --name webapp -p 80:80 webapp:v1"
+               sh "docker-compose up -d"
             }
         }
 
